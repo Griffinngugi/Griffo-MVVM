@@ -3,6 +3,7 @@ package net.ezra.navigation
 import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -19,6 +20,7 @@ import net.ezra.ui.products.ProductsScreen
 import net.ezra.ui.services.ServicesScreen
 import net.ezra.ui.shop.ShopScreen
 import net.ezra.ui.students.AddStudents
+import net.ezra.ui.students.StudentList
 
 @Composable
 fun AppNavHost(
@@ -88,6 +90,11 @@ fun AppNavHost(
         composable(ROUTE_SPLASH) {
             SplashScreen(navController)
         }
+
+        composable(ROUTE_STUDENTLIST) {
+            StudentList(navController=navController, viewModel = viewModel())
+        }
+
 
 
 

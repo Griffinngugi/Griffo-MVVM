@@ -17,6 +17,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import coil.compose.AsyncImage
 import kotlinx.coroutines.delay
 import net.ezra.R
 import net.ezra.navigation.ROUTE_HOME
@@ -50,14 +51,19 @@ fun SplashScreen(navController: NavHostController) {
     Column (
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
+
     ){
 
-        Image(painter = painterResource(id = R.drawable.logo),
-            contentDescription = "Logo",
-            modifier = Modifier.scale(scale.value)
-        )
 
-        Text("Apen Softwares")
+
+        AsyncImage(
+
+            model = "https://images.freeimages.com/variants/YSotMxjHEvoFiBGaZkkJv5K8/f4a36f6589a0e50e702740b15352bc00e4bfaf6f58bd4db850e167794d05993d?fmt=webp&w=500",
+            contentDescription = null,
+
+            )
+
+        Text("Farm skider")
 
 
 
